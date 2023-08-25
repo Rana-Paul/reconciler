@@ -2,7 +2,7 @@ const appElement = document.getElementById("app");
 let todos = [];
 let counter = 0;
 
-function renderBlock(todo) {
+function renderTodos(todo) {
   const { id, name } = todo;
 
     const data = document.createElement("div");
@@ -16,7 +16,7 @@ function renderBlock(todo) {
 }
 
 function render() {
-  todos.forEach(renderBlock);
+  todos.forEach(renderTodos);
 }
 
 function addTodo() {
@@ -24,7 +24,7 @@ function addTodo() {
   const id = counter;
   const name = prompt("Enter Todo name: ");
   todos.push({ id, name });
-  renderBlock(todos[todos.length - 1]);
+  renderTodos(todos[todos.length - 1]);
 }
 
 function removeTodo() {
